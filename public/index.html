@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Chateate</title>
+
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-md">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title text-success">Login</h4>
+          </div>
+          <div class="modal-body">
+            <label for="username">Nombre:</label>
+            <input type="text" id="username" size="20" autofocus><br>
+            <label for="state">Estado:</label>
+            <input type="text" id="state" size="30"><br>
+            <label for="avatar">Imagen:</label>
+            <label>
+              <input type="radio" name="avatar" value="/img/avatar1.png" checked id="radio-default"/>
+              <img src="/img/avatar1.png">
+              <input type="radio" name="avatar" value="/img/avatar2.png" />
+              <img src="/img/avatar2.png">
+              <input type="radio" name="avatar" value="/img/avatar3.png" />
+              <img src="/img/avatar3.png">
+              <input type="radio" name="avatar" value="/img/avatar4.png" />
+              <img src="/img/avatar4.png">
+            </label>
+          </div>
+          <div class="modal-footer">
+            <button id="btn-modal" type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-3" id="users-zone">
+          <div class="row" id="info">
+            <div class="col-xs-12 col-md-12">
+              <div>
+                <img src="" alt="User Image" id="user-avatar" hidden>
+                <label id="label-username"></label>
+                <i><p id="label-state"></p></i>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-12">
+              <div id="user-container">
+                <ul id="list-users"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-9 col-md-9" id="message-zone">
+          <div class="col-xs-12 col-md-12">
+            <div id="message-container">
+              <ul id="list-messages"></ul>
+              <form action="">
+                <input id="message" autocomplete="off"/>
+                <button id="send" class="btn btn-success btn-lg">Enviar</button><!--<button type="button" id="reset">Vaciar chat</button>-->
+              </form>
+            </div>      
+          </div>
+        </div>
+    </div>
+
+  </body>
+</html>

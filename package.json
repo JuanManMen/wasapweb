@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./server/server.js"
   },
+    "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanManMen/wasapweb.git"
+  },
   "engines": {
     "node": "4.1.1"
   },
